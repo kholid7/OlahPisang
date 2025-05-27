@@ -1,0 +1,401 @@
+/* Reset dan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fffbe6, #f6f1d1);
+  color: #4b4b4b;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  position: relative;
+  background: url('Kuning Cokelat Kreatif Spanduk Promo Jajanan Pisang Banner_20250527_105253_0000.png') center/cover no-repeat;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(70, 40, 0, 0.45);
+  z-index: 0;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+header h1 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 1;
+  letter-spacing: 3px;
+}
+
+/* Navbar */
+nav {
+  background-color: #a67c00;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+  font-family: 'Georgia', serif;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+  color: #ffeb3b;
+  border-bottom: 2px solid #ffeb3b;
+  outline: none;
+}
+
+/* Main Content */
+main {
+  max-width: 1000px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+}
+
+/* Beranda Section */
+.beranda {
+  background-color: #fff9db;
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 4px 10px rgba(166, 124, 0, 0.2);
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6b4c00;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.beranda h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.25rem;
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+}
+
+/* Tombol Mulai */
+.tombol-mulai {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: #ffca28;
+  color: #4a3b00;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(255, 202, 40, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tombol-mulai:hover {
+  background-color: #ffb300;
+  transform: scale(1.05);
+}
+
+/* Wave Separator */
+.wave-separator svg {
+  width: 100%;
+  display: block;
+  margin-top: -4px;
+}
+
+/* Destinasi / Resep Cards */
+.destinasi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 3rem;
+}
+
+.destinasi h2 {
+  grid-column: 1/-1;
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #a67c00;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.destinasi-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(166, 124, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.destinasi-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(166, 124, 0, 0.3);
+}
+
+.destinasi-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid #ffca28;
+  transition: transform 0.3s ease;
+}
+
+.destinasi-item:hover img {
+  transform: scale(1.05);
+}
+
+.destinasi-item h3 {
+  font-family: 'Georgia', serif;
+  color: #7a5900;
+  font-size: 1.5rem;
+  margin: 1rem 1rem 0.5rem;
+  flex-shrink: 0;
+}
+
+.destinasi-item p {
+  padding: 0 1rem 1rem;
+  color: #5c4a00;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+/* Tombol lihat resep */
+.destinasi-item button {
+  margin: 0 1rem 1rem;
+  padding: 0.6rem 1rem;
+  background-color: #ffca28;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  color: #4a3b00;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.destinasi-item button:hover {
+  background-color: #ffb300;
+  box-shadow: 0 0 10px #ffb300;
+}
+
+/* Resep Section */
+.resep {
+  background: #fffbea;
+  border: 1.5px solid #f1da87;
+  border-radius: 15px;
+  padding: 2rem 2.5rem;
+  max-width: 700px;
+  margin: 3rem auto 0;
+  box-shadow: 0 8px 20px rgba(166, 124, 0, 0.12);
+}
+
+.resep h2 {
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #a67c00;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.resep ul, .resep ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  color: #5c4a00;
+}
+
+.resep li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+/* Tombol kembali resep */
+.resep button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.7rem 2rem;
+  background-color: #a67c00;
+  border: none;
+  border-radius: 25px;
+  color: #fffbea;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(166, 124, 0, 0.35);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.resep button:hover {
+  background-color: #805f00;
+  transform: scale(1.05);
+}
+
+/* Tips Section */
+#tips {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background-color: #fffef4;
+  border: 2px dashed #f0c040;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(166, 124, 0, 0.15);
+}
+
+#tips h2 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  color: #a67c00;
+  margin-bottom:
+  
+  footer {
+  max-width: 900px;        
+  margin: 3rem auto;      
+  padding: 2rem 1.5rem;    
+  background-color: #fffbea;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(166, 124, 0, 0.15);
+  color: #4b4b4b;
+  font-size: 1rem;
+}
+
+footer h2 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  color: #a67c00;
+  margin-bottom: 1.5rem;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+footer ul li {
+  font-weight: 600;
+}
+
+footer ul li a {
+  color: #a67c00;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Form styling */
+footer form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+footer input[type="text"],
+footer input[type="email"],
+footer textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1.5px solid #f1da87;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+footer input[type="text"]:focus,
+footer input[type="email"]:focus,
+footer textarea:focus {
+  border-color: #a67c00;
+  outline: none;
+}
+
+footer button[type="submit"] {
+  align-self: center;
+  padding: 0.7rem 2.5rem;
+  background-color: #a67c00;
+  border: none;
+  border-radius: 25px;
+  color: #fffbea;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(166, 124, 0, 0.35);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+footer button[type="submit"]:hover {
+  background-color: #805f00;
+  transform: scale(1.05);
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #7a5900;
+}
+  
